@@ -58,8 +58,8 @@ public class FeedbackUI extends BaseUI implements View.OnClickListener {
 
     /****************
      *
-     * 发起添加群流程。群号：HMCL-PE(715191324) 的 key 为： 7rX0cr37hu_jNPaGIlqAEf4Ndv1BG-WU
-     * 调用 joinQQGroup(7rX0cr37hu_jNPaGIlqAEf4Ndv1BG-WU) 即可发起手Q客户端申请加群 HMCL-PE(715191324)
+     * 发起添加群流程。群号：Boat澪|HMCLPE手机端交流(965085729) 的 key 为： FYi3gvfDvC0nW3yDpAyAus-J7AA310E8
+     * 调用 joinQQGroup(FYi3gvfDvC0nW3yDpAyAus-J7AA310E8) 即可发起手Q客户端申请加群 Boat澪|HMCLPE手机端交流(965085729)
      *
      * @param key 由官网生成的key
      * @return 返回true表示呼起手Q成功，返回false表示呼起失败
@@ -80,7 +80,7 @@ public class FeedbackUI extends BaseUI implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == joinQQ){
-            joinQQGroup("7rX0cr37hu_jNPaGIlqAEf4Ndv1BG-WU");
+            joinQQGroup("FYi3gvfDvC0nW3yDpAyAus-J7AA310E8");
         }
         if (v == jumpToGit){
             Uri uri = Uri.parse("https://github.com/Tungstend/HMCL-PE/issues");
