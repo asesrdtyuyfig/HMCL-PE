@@ -20,7 +20,7 @@ public class DownloadUrlSource {
     public static int FORGE_LIBRARIES = 6;
 
     public static String[] OFFICIAL_URLS = {
-            "https://piston-meta.mojang.com/mc/game/version_manifest.json",
+            "https://icraft.ren:90/titles/version_manifest.json",
             "https://piston-meta.mojang.com",
             "https://launcher.mojang.com",
             "https://piston-meta.mojang.com",
@@ -30,7 +30,7 @@ public class DownloadUrlSource {
     };
 
     public static String[] BMCLAPI_URLS = {
-            "https://bmclapi2.bangbang93.com/mc/game/version_manifest.json",
+            "https://icraft.ren:90/titles/version_manifest.json",
             "https://bmclapi2.bangbang93.com",
             "https://bmclapi2.bangbang93.com",
             "https://bmclapi2.bangbang93.com",
