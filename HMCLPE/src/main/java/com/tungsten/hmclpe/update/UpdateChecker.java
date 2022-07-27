@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class UpdateChecker {
 
-    public static final String UPDATE_URL = "http://101.43.66.4/launcherInfo.json";
+    public static final String UPDATE_URL = "https://icraft.ren:90/titles/launcherInfo.json";
 
     private Context context;
     private MainActivity activity;
