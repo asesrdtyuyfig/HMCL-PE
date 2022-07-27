@@ -98,7 +98,8 @@ public class InstallLauncherFile {
          *检查Java运行时，Java可能内置在启动器也可能需要下载，因此单独处理
          */
         checkJava8(activity, progressCallback);
-        checkJava17(activity);
+        checkJava17(activity, progressCallback);
+        downloadJava17(activity);
     }
 
     @SuppressLint("SetTextI18n")
@@ -111,8 +112,18 @@ public class InstallLauncherFile {
             AssetsUtils.getInstance(activity).setProgressCallback(callback).copyOnMainThread("app_runtime/java/default",AppManifest.JAVA_DIR + "/default");
         }
     }
+    public static void checkJava17(SplashActivity activity, AssetsUtils.ProgressCallback callback){
+        activity.runOnUiThread(() -> {
+            activity.loadingText.setText(activity.getString(R.string.loading_hint_java_17));
+        });
+        if (!new File(AppManifest.JAVA_DIR + "/JRE17").exists() || !new File(AppManifest.JAVA_DIR + "/JRE17/version").exists() || Integer.parseInt(Objects.requireNonNull(FileStringUtils.getStringFromFile(AppManifest.JAVA_DIR + "/JRE17/version"))) < Integer.parseInt(Objects.requireNonNull(AssetsUtils.readAssetsTxt(activity, "app_runtime/java/JRE17/version")))) {
+            FileUtils.deleteDirectory(AppManifest.JAVA_DIR + "/JRE17");
+            AssetsUtils.getInstance(activity).setProgressCallback(callback).copyOnMainThread("app_runtime/java/JRE17",AppManifest.JAVA_DIR + "/JRE17");
+        }
+    }
 
-    public static void checkJava17(SplashActivity activity){
+
+    public static void downloadJava17(SplashActivity activity){
         activity.runOnUiThread(() -> {
             activity.loadingText.setText(activity.getString(R.string.loading_hint_java_17));
         });
