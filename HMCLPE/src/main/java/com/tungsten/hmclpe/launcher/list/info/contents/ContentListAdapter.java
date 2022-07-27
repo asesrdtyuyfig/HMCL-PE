@@ -103,8 +103,8 @@ public class ContentListAdapter extends BaseAdapter {
                 }).start();
             }
             if (list.size() == 0){
-                list.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_pri),AppManifest.DEFAULT_GAME_DIR,true));
-                list.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_sec),AppManifest.INNER_GAME_DIR,false));
+                list.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_pri),AppManifest.DEFAULT_GAME_DIR,false));
+                list.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_sec),AppManifest.INNER_GAME_DIR,true));
                 activity.launcherSetting.gameFileDirectory = list.get(0).path;
                 GsonUtils.saveLauncherSetting(activity.launcherSetting,AppManifest.SETTING_DIR + "/launcher_setting.json");
                 new Thread(() -> {

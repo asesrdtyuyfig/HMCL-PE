@@ -8,7 +8,8 @@ import com.tungsten.hmclpe.utils.file.FileUtils;
 public class AppManifest {
 
     public static String LAUNCHER_DIR = Environment.getExternalStorageDirectory() + "/HMCLPE";
-    public static String DEFAULT_GAME_DIR = LAUNCHER_DIR + "/.minecraft";
+    //public static String DEFAULT_GAME_DIR = LAUNCHER_DIR + "/.minecraft";
+    public static String DEFAULT_GAME_DIR;
 
     public static String INNER_DIR;
     public static String INNER_FILE_DIR;
@@ -49,6 +50,8 @@ public class AppManifest {
         STYLE_DIR = INNER_FILE_DIR + "/style";
         DEBUG_DIR = context.getExternalFilesDir("debug").getAbsolutePath();
         INNER_GAME_DIR = context.getExternalFilesDir(".minecraft").getAbsolutePath();
+        //新增的
+        DEFAULT_GAME_DIR = INNER_GAME_DIR;
 
         DEFAULT_CACHE_DIR = context.getCacheDir().getAbsolutePath();
         INSTALL_DIR = DEFAULT_CACHE_DIR + "/install";

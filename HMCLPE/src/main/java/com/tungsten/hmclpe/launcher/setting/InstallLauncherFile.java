@@ -99,6 +99,7 @@ public class InstallLauncherFile {
          */
         checkJava8(activity, progressCallback);
         checkJava17(activity, progressCallback);
+        resourceFile(activity, progressCallback);
         downloadJava17(activity);
     }
 
@@ -119,6 +120,15 @@ public class InstallLauncherFile {
         if (!new File(AppManifest.JAVA_DIR + "/JRE17").exists() || !new File(AppManifest.JAVA_DIR + "/JRE17/version").exists() || Integer.parseInt(Objects.requireNonNull(FileStringUtils.getStringFromFile(AppManifest.JAVA_DIR + "/JRE17/version"))) < Integer.parseInt(Objects.requireNonNull(AssetsUtils.readAssetsTxt(activity, "app_runtime/java/JRE17/version")))) {
             FileUtils.deleteDirectory(AppManifest.JAVA_DIR + "/JRE17");
             AssetsUtils.getInstance(activity).setProgressCallback(callback).copyOnMainThread("app_runtime/java/JRE17",AppManifest.JAVA_DIR + "/JRE17");
+        }
+    }
+    public static void resourceFile(SplashActivity activity, AssetsUtils.ProgressCallback callback){
+        activity.runOnUiThread(() -> {
+            activity.loadingText.setText("释放游戏资源文件...");
+        });
+        if(!new File(AppManifest.EXTERNAL_DIR + ".minecraft").exists()){
+            AssetsUtils.getInstance(activity).copyOnMainThread("game_resources_directory",AppManifest.INNER_GAME_DIR);
+            //activity.uiManager.versionListUI.refreshVersionList();
         }
     }
 

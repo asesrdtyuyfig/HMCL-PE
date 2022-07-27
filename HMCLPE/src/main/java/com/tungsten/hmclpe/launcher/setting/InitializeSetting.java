@@ -69,8 +69,8 @@ public class InitializeSetting {
             contentList = GsonUtils.getContentListFromFile(AppManifest.GAME_FILE_DIRECTORY_DIR + "/game_file_directories.json");
         }
         else {
-            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_pri),AppManifest.DEFAULT_GAME_DIR,true));
-            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_sec),AppManifest.INNER_GAME_DIR,false));
+            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_pri),AppManifest.DEFAULT_GAME_DIR,false));
+            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_sec),AppManifest.INNER_GAME_DIR,true));
             GsonUtils.saveContents(contentList,AppManifest.GAME_FILE_DIRECTORY_DIR + "/game_file_directories.json");
         }
         return contentList;
