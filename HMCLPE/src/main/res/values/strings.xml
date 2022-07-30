@@ -69,7 +69,7 @@
     <string name="loading_hint_select">Choose Java 17 installation methods</string>
     <string name="loading_hint_download">Download</string>
     <string name="loading_hint_local">Local</string>
-    <string name="loading_hint_java_17">Checking Java 17…</string>
+    <string name="loading_hint_java_17">Installing Java17 and Resource File…</string>
     <string name="loading_hint_java_17_select">Please choose…</string>
     <string name="loading_hint_java_17_check">Checking file…</string>
     <string name="loading_hint_java_17_error">Please select Official Java 17 file, if you don\'t have this file, download it on github.</string>

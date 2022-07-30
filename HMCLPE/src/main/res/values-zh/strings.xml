@@ -34,7 +34,7 @@
     <string name="loading_hint_select">选择 Java 17 安装方式</string>
     <string name="loading_hint_download">下载安装</string>
     <string name="loading_hint_local">本地安装</string>
-    <string name="loading_hint_java_17">正在检查 Java 17…</string>
+    <string name="loading_hint_java_17">正在安装JAVA17和游戏资源…</string>
     <string name="loading_hint_java_17_select">请选择…</string>
     <string name="loading_hint_java_17_check">正在检查文件…</string>
     <string name="loading_hint_java_17_error">请选择官方提供的 Java 17 文件，如果你没有此文件，请加入官方群获取</string>

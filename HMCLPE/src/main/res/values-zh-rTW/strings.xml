@@ -28,7 +28,7 @@
     <string name="loading_hint_select">選擇 Java 17 安裝方式</string>
     <string name="loading_hint_download">下載安裝</string>
     <string name="loading_hint_local">本地安裝</string>
-    <string name="loading_hint_java_17">正在檢查 Java 17…</string>
+    <string name="loading_hint_java_17">正在安裝Java17和遊戲資源…</string>
     <string name="dialog_add_verify_server_name">服務器名稱</string>
     <string name="dialog_add_verify_server_nide_name">服務器名稱</string>
     <string name="dialog_verify_msg">您的設備碼為：\n%s\n請填寫與此設備碼匹配的授權驗證碼。</string>
